@@ -23,6 +23,9 @@ function squareDigits(num, answer) {
 
 // Other Solutions:
 
+// ~~~Map allows you to perform a function as you create a new array, important to remember~~~
+
+//
 // function squareDigits(num){
 //     return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
     
