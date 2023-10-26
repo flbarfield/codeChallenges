@@ -34,4 +34,4 @@ function likes(names) {
     }
   }
 
-// Basically all the optimal solutions used switch cases like I did.
+// Basically all the optimal solutions used switch cases like I did...
