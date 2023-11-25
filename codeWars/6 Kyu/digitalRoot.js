@@ -32,11 +32,13 @@ function digitalRoot(n) {
   digitalRoot(648199)
 
   // OTHER SOLUTIONS:
-  
+
+// ***comments say this clearly requires mathematic background knowledge, and as such this solution makes no sense to me.***
 //   function digital_root(n) {
 //     return (n - 1) % 9 + 1;
 //   }
 
+//***Neat and easy, checks if n is less than 10 right away. Else it process the number with str/split/reduce***
 //   function digital_root(n) {
 //     if (n < 10) return n;
     
@@ -44,6 +46,7 @@ function digitalRoot(n) {
 //       n.toString().split('').reduce(function(acc, d) { return acc + +d; }, 0));
 //   }
 
+//***Similar to above, just uses a for loop instead of reduce.***/
 //   function digital_root(n) {
 //     if (n < 10)
 //       return n;
