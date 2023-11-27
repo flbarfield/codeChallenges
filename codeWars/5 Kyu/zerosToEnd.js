@@ -51,17 +51,19 @@ function moveZeros(arr) {
 
 // Whew, brute forced the heck out of that one... Other solutions:
 //
-// ***
+// *** makes two different arrays and then concacts them together? One with 0s and one without 0s? It's not really readable though, just short.
 //var moveZeros = function (arr) {
 //   return arr.filter(function(x) {return x !== 0}).concat(arr.filter(function(x) {return x === 0;}));
 // }
 //
+// *** far more readable. make a filtered list by filtering away 0s, and then a 0 list by filtering out everything not a 0. Then returning a .concact of both lists.
 // var moveZeros = function (arr) {
 //   var filtedList = arr.filter(function (num){return num !== 0;});
 //   var zeroList = arr.filter(function (num){return num === 0;});
 //   return filtedList.concat(zeroList);
 // }
 //
+// ** Same as above, just slightly shorter due to using spreads one after another. Less actual declarations of variables
 // var moveZeros = function (arr) {
 //   return [
 //     ...(arr.filter(n => n !== 0)),
