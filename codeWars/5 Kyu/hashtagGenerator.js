@@ -46,3 +46,31 @@ function generateHashtag(str) {
   }
   
   generateHashtag(" ".repeat(200))
+
+// Other Solutions:
+
+// ***Good to remember that reduce's whole purpose is to bring things to a single result. 'str.substring' is actually new to me though, it returns all values after the index that it is given! If given two parameters, first will be where it should start while the second will be where it stops.
+
+// function generateHashtag (str) {
+
+//     var hashtag = str.split(' ').reduce(function(tag, word) {
+//       return tag + word.charAt(0).toUpperCase() + word.substring(1);
+//     }, '#');
+    
+//     return hashtag.length == 1 || hashtag.length > 140 ? false : hashtag;
+//   }
+
+// function generateHashtag(str) {
+//   if (!str.trim()) return false;
+
+//   const result =
+//     '#' +
+//     str
+//       .split(' ')
+//       .map((l) => l.charAt(0).toUpperCase() + l.slice(1))
+//       .join('');
+
+//   return result.length > 140 ? false : result;
+// }
+
+// const generateHashtag = str => (s = '#'+str.trim().split(" ").filter(e=>e).map(e=>e[0].toUpperCase() + e.substring(1,e.length).toLowerCase()).join("")).length > 1 && s.length <= 140 ? s : false
