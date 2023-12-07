@@ -83,3 +83,73 @@ var romanToInt = function(s) {
     })
     return count
 };
+
+// Other Solutions:
+
+// var romanToInt = function(s) {
+//     let table = {
+//       "I" : 1,
+//       "V" : 5,
+//       "X" : 10,
+//       "L" : 50,
+//       "C" : 100,
+//       "D" : 500,
+//       "M" : 1000
+//     }
+ 
+//     let result = 0;
+ 
+//     for( i = 0; i < s.length; i++){
+//       let current = table[s[i]]
+//       let next = table[s[i + 1]]
+ 
+//      if(current < next){
+//        result += next-current
+//        i++
+//      }else{
+//        result += current
+//      }
+ 
+//     }
+//     return result
+//  };
+
+// ------------
+//def romanToInt(self, s: str) -> int:
+// hashset = {
+//     'I': 1,
+//     'V': 5,
+//     'X': 10,
+//     'L': 50,
+//     'C': 100,
+//     'D': 500,
+//     'M': 1000,
+// }
+
+// sol = 0
+
+// for i, num in enumerate(s):
+//     if i < len(s) - 1 and hashset[num] < hashset[s[i + 1]]:
+//         sol -= hashset[num]
+//     else:
+//         sol += hashset[num]
+// return sol
+
+// ----------------
+// const symbols = {
+//     "I": 1, 
+//     "V": 5, 
+//     "X": 10,
+//     "L": 50,
+//     "C": 100,
+//     "D": 500,
+//     "M": 1000
+// }
+
+// const romanToInt = (s) => {
+//    let value = 0
+//    for (let i = 0; i < s.length; i++) {
+//        symbols[s[i]] < symbols[s[i + 1]] ? value -= symbols[s[i]] : value += symbols[s[i]]
+//    }
+//    return value;
+// };
